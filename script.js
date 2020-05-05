@@ -1,4 +1,6 @@
-$('#next').click(function(){
+
+
+function next() {
     var curr_img = $('img.active');
     curr_img.removeClass('active');
     var curr_dot = $('i.fa-circle.active');
@@ -15,8 +17,10 @@ $('#next').click(function(){
         $('img:first-child').addClass('active');
         $('i.fa-circle:first-child').addClass('active');
     }
-})
+}
 
+$('#next').click(next)
+setInterval(next, 3000);
 $('#prev').click(function(){
     var curr_img = $('img.active');
     curr_img.removeClass('active');
